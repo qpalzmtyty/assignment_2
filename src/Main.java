@@ -5,10 +5,10 @@ import Modules.Student;
 import java.util.Collections;
 import java.util.Scanner;
 import java.util.ArrayList;
+import java.util.List;
 
 public class Main {
-    static void printData(ArrayList<Person> people) {
-        Collections.sort(people);
+    static void printData(Iterable<Person> people) {
         for (Person person : people) {
             System.out.println(person + " earns " + person.getPaymentAmount() + " tenge");
         }
@@ -61,6 +61,7 @@ public class Main {
                     System.out.print("Enter the number of the operation you want: ");
                     break;
                 case "3":
+                    Collections.sort(people);
                     printData(people);
                     System.out.println();
                     System.out.print("Enter the number of the operation you want: ");
